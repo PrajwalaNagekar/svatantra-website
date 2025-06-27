@@ -3,7 +3,7 @@ import DifferencesImage from '../../../assets/images/differences/image.png';
 
 const Differences = () => {
     return (
-        <div className="container mx-auto px-4 py-10 space-y-8">
+        <div className="container mx-auto px-4 py-10 space-y-8" style={{ fontFamily: 'Nunito, sans-serif' }} >
             {/* Top Centered Image */}
             <div className="flex justify-center">
                 <img

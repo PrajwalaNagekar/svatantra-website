@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white pt-10">
+    <footer className="bg-gray-800 text-white pt-10" style={{ fontFamily: 'Nunito, sans-serif' }}>
       <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-between gap-10">
         {/* Left Side - Description + Social */}
         <div className="w-full lg:w-2/3">

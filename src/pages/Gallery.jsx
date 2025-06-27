@@ -10,7 +10,7 @@ const galleryImages = [
   'https://svatantra.in/assets/202205121652342476.jpeg',
   'https://svatantra.in/assets/202301121673532727.jpg',
   'https://svatantra.in/assets/202301121673532798.jpg',
- 
+
 
 
 ];
@@ -18,7 +18,7 @@ const galleryImages = [
 const Gallery = () => {
   return (
     <section className="py-10 px-4 bg-white">
-      <h2 className="text-3xl font-bold text-center text-pink-600 mb-8">Gallery</h2>
+      <h2 style={{ fontFamily: 'Nunito, sans-serif' }} className="text-3xl md:text-5xl font-extrabold text-center text-black mb-8">Gallery</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {galleryImages.map((src, index) => (

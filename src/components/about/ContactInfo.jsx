@@ -4,8 +4,8 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 const ContactInfo = () => {
     return (
         <div className="w-full md:w-1/3 space-y-6">
-            <h2 className="text-3xl font-bold text-pink-600 mb-4 underline decoration-pink-300">Office Info</h2>
-            <div>
+            <h2 className="text-3xl  text-black mb-4 underline decoration-pink-300 font-extrabold" style={{ fontFamily: 'Nunito, sans-serif' }}>Office Info</h2>
+            <div style={{ fontFamily: 'Nunito, sans-serif' }}>
                 <h3 className="font-semibold text-lg">Location</h3>
                 <p className="text-gray-600">
                     148/149, House Srikamala<br />
@@ -14,12 +14,12 @@ const ContactInfo = () => {
                 </p>
             </div>
 
-            <div>
-                <h3 className="font-semibold text-lg">Phone</h3>
+            <div style={{ fontFamily: 'Nunito, sans-serif' }}>
+                <h3 className="font-semibold text-lg" >Phone</h3>
                 <p className="text-gray-600">+91 6360667034</p>
             </div>
 
-            <div>
+            <div style={{ fontFamily: 'Nunito, sans-serif' }}>
                 <h3 className="font-semibold text-lg">Email</h3>
                 <p className="text-gray-600">svatantramontessori@gmail.com</p>
             </div>

@@ -24,7 +24,7 @@ const Header = () => {
                 </button>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-8 font-semibold text-gray-700">
+                <nav style={{ fontFamily: 'Nunito, sans-serif' }} className="hidden md:flex items-center gap-8  text-gray-700 font-extrabold">
                     <NavLink
                         to="/"
                         className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/") ? "text-pink-600" : ""}`}
@@ -101,7 +101,7 @@ const Header = () => {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-white shadow-md px-4 py-3 space-y-2 font-medium border-t">
+                <div className="md:hidden bg-white shadow-md px-4 py-3 space-y-2  border-t font-extrabold" style={{ fontFamily: 'Nunito, sans-serif' }}>
                     <NavLink
                         to="/"
                         onClick={() => setMobileMenuOpen(false)}
@@ -114,7 +114,8 @@ const Header = () => {
                     <div>
                         <button
                             onClick={() => setMontessoriOpen(prev => !prev)}
-                            className="w-full text-left font-semibold text-gray-700 hover:text-pink-600 py-2 transition-colors duration-200"
+                            className="w-full text-left  text-black hover:text-pink-600 py-2 transition-colors duration-200 font-extrabold"
+                            style={{ fontFamily: 'Nunito, sans-serif' }}
                         >
                             Montessori
                         </button>

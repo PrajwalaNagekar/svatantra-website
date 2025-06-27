@@ -7,7 +7,7 @@ const Benefits = () => {
         <div className="container mx-auto px-4 py-10 space-y-12">
             {/* Section 1 - Centered Heading & Paragraph */}
             <div className="text-center max-w-3xl mx-auto">
-                <h1 className="text-2xl md:text-3xl font-bold text-pink-600 mb-4">
+                <h1 className="text-3xl md:text-6xl font-extrabold text-black mb-4" style={{ fontFamily: 'Nunito, sans-serif' }}>
                     What Are The Benefits of A Montessori School?
                 </h1>
                 <p className="text-gray-700 text-sm md:text-base leading-relaxed">

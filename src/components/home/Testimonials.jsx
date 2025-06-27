@@ -40,7 +40,8 @@ const TestimonialSlider = () => {
 
     return (
         <div className="w-full px-4 py-12 bg-gray-50">
-            <h2 className="text-3xl font-bold text-center mb-10 text-pink-600">Feedbacks</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-black mb-8 font-extrabold"
+                style={{ fontFamily: 'Nunito, sans-serif' }}>Feedbacks</h2>
 
             <div className="relative max-w-3xl mx-auto bg-white rounded-lg shadow-lg px-6 py-12 sm:px-10 sm:py-16">
                 {/* Left Button */}

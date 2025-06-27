@@ -41,8 +41,9 @@ const cards = [
 
 const WhyChooseUs = () => {
     return (
-        <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-            <h2 className="text-3xl font-bold text-center text-pink-600 mb-8">Why Choose Us</h2>
+        <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-black mb-8 font-extrabold"
+                style={{ fontFamily: 'Nunito, sans-serif' }}>Why Choose Us</h2>
 
             {/* Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-10">
@@ -51,6 +52,7 @@ const WhyChooseUs = () => {
                         key={card.id}
                         className={`p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center text-white ${[0, 3].includes(index % 4) ? 'bg-[#007bff]' : 'bg-[#20c997]'
                             }`}
+                        style={{ fontFamily: 'Nunito, sans-serif' }}
 
                     >
                         <img
@@ -58,14 +60,14 @@ const WhyChooseUs = () => {
                             alt={card.title}
                             className="w-60 h-60 mx-auto mb-3 rounded-md object-cover"
                         />
-                        <h3 className="font-semibold text-lg">{card.title}</h3>
+                        <h3 className="font-semibold text-3xl">{card.title}</h3>
                         <p className="text-white text-sm">{card.caption}</p>
                     </div>
                 ))}
             </div>
 
             {/* Big Card Below */}
-            <div className="bg-cyan-600 p-6 md:p-10 rounded-lg shadow-lg text-center max-w-5xl mx-auto text-white space-y-6">
+            <div className="bg-cyan-600 p-6 md:p-10 rounded-lg shadow-lg text-center max-w-5xl mx-auto text-white space-y-6" style={{ fontFamily: 'Nunito, sans-serif' }}>
                 <h3 className="text-3xl font-bold text-red-700">Role of an Educator</h3>
 
                 <p className="text-lg">
