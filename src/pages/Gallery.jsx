@@ -18,7 +18,7 @@ const galleryImages = [
 const Gallery = () => {
   return (
     <section className="py-10 px-4 bg-white">
-      <h2 style={{ fontFamily: 'Nunito, sans-serif' }} className="text-3xl md:text-5xl font-extrabold text-center text-black mb-8">Gallery</h2>
+      <h2 style={{ fontFamily: 'Nunito, sans-serif' }} className="text-3xl md:text-5xl font-extrabold text-center text-black mb-8 underline decoration-pink-300">Gallery</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {galleryImages.map((src, index) => (

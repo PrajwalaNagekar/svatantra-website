@@ -53,7 +53,10 @@ const Home = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center px-4">
-              <h2 className="text-3xl md:text-7xl font-bold mb-3 flex flex-wrap justify-center gap-2 leading-tight" style={{ fontFamily: 'Nunito, sans-serif' }}>
+              <h2
+                className="text-3xl md:text-7xl font-bold mb-3 flex flex-wrap justify-center gap-2 leading-tight fade-in-up"
+                style={{ fontFamily: 'Nunito, sans-serif' }}
+              >
                 {item.heading.split(' ').map((word, index) => {
                   const colors = ['text-white', 'text-yellow-400', 'text-white', 'text-blue-400'];
                   const colorClass = colors[index % colors.length];
@@ -65,18 +68,21 @@ const Home = () => {
                 })}
               </h2>
 
-              <p className="text-sm md:text-2xl font-semibold max-w-xl mb-5 md:mb-6 px-2 md:px-4 text-white/90" style={{ fontFamily: 'Nunito, sans-serif' }}F>
+              <p
+                className="text-sm md:text-2xl font-semibold max-w-xl mb-5 md:mb-6 px-2 md:px-4 text-white/90 fade-in-up"
+                style={{ fontFamily: 'Nunito, sans-serif' }}
+              >
                 {item.subtitle}
               </p>
 
-
               <Link
                 to={item.link}
-                className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-4 rounded-full shadow text-sm md:text-base"
+                className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-4 rounded-full shadow text-sm md:text-base fade-in-up"
               >
                 {item.buttonText}
               </Link>
             </div>
+
 
           </div>
         ))}

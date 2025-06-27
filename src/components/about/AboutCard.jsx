@@ -1,9 +1,11 @@
 import React from 'react';
 
-const   AboutCard = () => {
+const AboutCard = () => {
   return (
     <div className="flex justify-center px-4 py-10" style={{ fontFamily: 'Nunito, sans-serif' }}>
-      <div className="bg-pink-600 text-white rounded-3xl p-8 max-w-4xl w-full text-center shadow-lg">
+      <div
+        className="bg-pink-600 text-white rounded-3xl p-8 max-w-4xl w-full text-center shadow-lg transition-transform duration-500 transform hover:scale-105 hover:shadow-2xl"
+      >
         <h2 className="text-2xl text-black font-semibold mb-4">About Us</h2>
         <p className="mb-6 leading-relaxed">
           Svatantra 'Independence' began its life from a seed in 2018. Our mission is in the belief
@@ -25,6 +27,7 @@ const   AboutCard = () => {
         <p>"Follow the child" by Dr. Maria Montessori.</p>
       </div>
     </div>
+
   );
 };
 

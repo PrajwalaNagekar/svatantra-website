@@ -6,7 +6,7 @@ const Methods = () => {
         <div className="container mx-auto px-4 py-24 space-y-10">
             {/* Heading & Paragraphs */}
             <div className="text-center max-w-3xl mx-auto" style={{ fontFamily: 'Nunito, sans-serif' }}>
-                <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-4" style={{ fontFamily: 'Nunito, sans-serif' }}>
+                <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-4 underline decoration-pink-300" style={{ fontFamily: 'Nunito, sans-serif' }}>
                     How Montessori Helps Build the Child’s Self-Sufficiency and Independence?
                 </h2>
                 <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
