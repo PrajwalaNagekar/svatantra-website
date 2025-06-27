@@ -11,14 +11,15 @@ const carouselItems = [
   {
     image: 'https://svatantra.in/assets/img/banner0.jpeg',
     heading: 'Your Child Our Responsibility',
-    subtitle: "The Education of even a small child,therefore, doesnot aim at preparing him or her  for school, but for life.",
+    subtitle: "Svatantra is about Holistic and child Centric Education",
+
     buttonText: 'Contact Us',
     link: '/contact',
   },
   {
     image: 'https://svatantra.in/assets/img/banner0.jpeg',
     heading: 'Education And Care For Your Children',
-    subtitle: "Svatantra is about Holistic and child Centric Education",
+    subtitle: "The Education of even a small child,therefore, doesnot aim at preparing him or her  for school, but for life.",
     buttonText: 'Get Started',
     link: '/about',
   },
@@ -51,8 +52,8 @@ const Home = () => {
               alt={`slide-${index}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center p-4">
-              <h2 className="text-5xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center gap-2">
+            <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center px-4">
+              <h2 className="text-3xl md:text-7xl font-bold mb-3 flex flex-wrap justify-center gap-2 leading-tight">
                 {item.heading.split(' ').map((word, index) => {
                   const colors = ['text-white', 'text-yellow-400', 'text-white', 'text-blue-400'];
                   const colorClass = colors[index % colors.length];
@@ -63,30 +64,38 @@ const Home = () => {
                   );
                 })}
               </h2>
+
+              <p className="text-sm md:text-3xl font-semibold max-w-xl mb-5 md:mb-6 px-2 md:px-4 text-white/90">
+                {item.subtitle}
+              </p>
+
+
               <Link
                 to={item.link}
-                className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full shadow"
-
+                className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-4 rounded-full shadow text-sm md:text-base"
               >
                 {item.buttonText}
               </Link>
             </div>
+
           </div>
         ))}
 
         {/* Controls */}
+        {/* Controls - place after carouselItems.map */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black/50 px-2 py-1 rounded hover:bg-black/70 z-20"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 md:left-8 text-white text-3xl bg-black/50 px-3 py-2 rounded-full hover:bg-black/70"
         >
           <MdKeyboardArrowLeft />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black/50 px-2 py-1 rounded hover:bg-black/70 z-20"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 md:right-8 text-white text-3xl bg-black/50 px-3 py-2 rounded-full hover:bg-black/70"
         >
           <MdOutlineKeyboardArrowRight />
         </button>
+
       </div>
 
       {/* Why Choose Us Section */}

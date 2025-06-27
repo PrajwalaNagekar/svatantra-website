@@ -7,6 +7,12 @@ const galleryImages = [
   'https://svatantra.in/assets/202205121652342263.jpeg',
   'https://svatantra.in/assets/202205121652342439.jpeg',
   'https://svatantra.in/assets/202205121652342468.jpeg',
+  'https://svatantra.in/assets/202205121652342476.jpeg',
+  'https://svatantra.in/assets/202301121673532727.jpg',
+  'https://svatantra.in/assets/202301121673532798.jpg',
+ 
+
+
 ];
 
 const Gallery = () => {

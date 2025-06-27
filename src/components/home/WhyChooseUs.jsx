@@ -49,8 +49,9 @@ const WhyChooseUs = () => {
                 {cards.map((card, index) => (
                     <div
                         key={card.id}
-                        className={`p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center ${index % 2 === 0 ? 'bg-blue-500' : 'bg-blue-600'
-                            } text-white`}
+                        className={`p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center text-white ${[0, 3].includes(index % 4) ? 'bg-[#007bff]' : 'bg-[#20c997]'
+                            }`}
+
                     >
                         <img
                             src={card.image}
