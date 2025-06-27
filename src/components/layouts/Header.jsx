@@ -33,44 +33,62 @@ const Header = () => {
                     </NavLink>
 
                     {/* Montessori Dropdown */}
-                    <div className="relative group">
+                    {/* Montessori Dropdown */}
+                    <div className="relative">
                         <button
-                            className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/montessori/benefits") || isActive("/montessori/teaching-methods") || isActive("/montessori/montessori-vs-traditional") ? "text-pink-600" : ""}`}
+                            onClick={() => setMontessoriOpen((prev) => !prev)}
+                            className={`hover:text-pink-600 transition ${["/montessori-benefits", "/teaching-methods", "/montessori-vs-traditionals"].includes(location.pathname)
+                                    ? "text-pink-600"
+                                    : ""
+                                }`}
                         >
                             Montessori
                         </button>
 
-                        {/* Dropdown Menu with Animation */}
-                        <div className="absolute top-full left-0 w-64 z-50 bg-white shadow-lg rounded-md border border-pink-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                            <ul className="py-2">
-                                <li>
-                                    <NavLink
-                                        to="/montessori-benefits"
-                                        className={`block px-5 py-2.5 border-l-4 ${isActive("/montessori/benefits") ? "border-pink-600 text-pink-600 bg-pink-50" : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"} transition-all duration-200`}
-                                    >
-                                        Benefits
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/teaching-methods"
-                                        className={`block px-5 py-2.5 border-l-4 ${isActive("/montessori/teaching-methods") ? "border-pink-600 text-pink-600 bg-pink-50" : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"} transition-all duration-200`}
-                                    >
-                                        Teaching Methods
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/montessori-vs-traditionals"
-                                        className={`block px-5 py-2.5 border-l-4 ${isActive("/montessori/montessori-vs-traditional") ? "border-pink-600 text-pink-600 bg-pink-50" : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"} transition-all duration-200`}
-                                    >
-                                        Montessori vs Traditional
-                                    </NavLink>
-                                </li>
-                            </ul>
-                        </div>
-
+                        {isMontessoriOpen && (
+                            <div className="absolute top-full left-0 w-64 z-50 bg-white shadow-lg rounded-md border border-pink-100 mt-2">
+                                <ul className="py-2">
+                                    <li>
+                                        <NavLink
+                                            to="/montessori-benefits"
+                                            onClick={() => setMontessoriOpen(false)}
+                                            className={`block px-5 py-2.5 border-l-4 ${isActive("/montessori-benefits")
+                                                    ? "border-pink-600 text-pink-600 bg-pink-50"
+                                                    : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
+                                                }`}
+                                        >
+                                            Benefits
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink
+                                            to="/teaching-methods"
+                                            onClick={() => setMontessoriOpen(false)}
+                                            className={`block px-5 py-2.5 border-l-4 ${isActive("/teaching-methods")
+                                                    ? "border-pink-600 text-pink-600 bg-pink-50"
+                                                    : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
+                                                }`}
+                                        >
+                                            Teaching Methods
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink
+                                            to="/montessori-vs-traditionals"
+                                            onClick={() => setMontessoriOpen(false)}
+                                            className={`block px-5 py-2.5 border-l-4 ${isActive("/montessori-vs-traditionals")
+                                                    ? "border-pink-600 text-pink-600 bg-pink-50"
+                                                    : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
+                                                }`}
+                                        >
+                                            Montessori vs Traditional
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
                     </div>
+
 
                     <NavLink
                         to="/event"
