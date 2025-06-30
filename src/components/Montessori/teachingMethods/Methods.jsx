@@ -3,7 +3,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 
 const Methods = () => {
     return (
-        <div className="container mx-auto px-4 py-24 space-y-10">
+        <div className="container mx-auto px-4 py-10 space-y-10">
             {/* Heading & Paragraphs */}
             <div className="text-center max-w-3xl mx-auto" style={{ fontFamily: 'Nunito, sans-serif' }}>
                 <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-4 underline decoration-pink-300" style={{ fontFamily: 'Nunito, sans-serif' }}>

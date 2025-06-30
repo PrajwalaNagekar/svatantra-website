@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
                 {cards.map((card, index) => (
                     <div
                         key={card.id}
-                        className={`p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer text-center text-white ${[0, 3].includes(index % 4) ? 'bg-[#007bff]' : 'bg-[#20c997]'
+                        className={`p-4 rounded-4xl shadow hover:shadow-lg transition cursor-pointer text-center text-white ${[0, 3].includes(index % 4) ? 'bg-[#007bff]' : 'bg-[#20c997]'
                             }`}
                         data-aos="fade-up"
                         data-aos-delay={index * 100}
