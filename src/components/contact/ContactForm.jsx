@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { contact } from "../../api/index"; 
+import { contact } from "../../api/index";
 import PopupModal from "../../components/popupModal/PopupModal";
 import FullScreenLoader from "../..//components/loaders/FullScreenLoader";
 
@@ -15,10 +15,10 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { name, phone, email, comments } = form;
-        if (!name || !phone || !email || !comments) {
-            setPopup({ show: true, message: "All fields are required", type: "error" });
-            return;
-        }
+        // if (!name || !phone || !email || !comments) {
+        //     setPopup({ show: true, message: "All fields are required", type: "error" });
+        //     return;
+        // }
 
         try {
             setLoading(true);
@@ -51,6 +51,7 @@ const ContactForm = () => {
                 <div className="flex flex-col md:flex-row gap-4">
                     <input
                         type="text"
+                        required
                         name="name"
                         placeholder="Your Name"
                         value={form.name}
@@ -59,16 +60,27 @@ const ContactForm = () => {
                     />
                     <input
                         type="text"
+                        required
                         name="phone"
                         placeholder="Your Phone"
                         value={form.phone}
-                        onChange={handleChange}
+                        onChange={(e) => {
+                            const value = e.target.value;
+                            if (/^\d{0,10}$/.test(value)) {
+                                setForm({ ...form, phone: value });
+                            }
+                        }}
+                        maxLength={10}
+                        inputMode="numeric"
+                        pattern="[0-9]*"
                         className="flex-1 p-4 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                     />
+
                 </div>
 
                 <input
                     type="email"
+                    required
                     name="email"
                     placeholder="Your Email"
                     value={form.email}
@@ -78,6 +90,7 @@ const ContactForm = () => {
 
                 <textarea
                     name="comments"
+                    required
                     placeholder="Comments"
                     rows="5"
                     value={form.comments}

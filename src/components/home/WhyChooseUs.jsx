@@ -57,8 +57,7 @@ const WhyChooseUs = () => {
                 {cards.map((card, index) => (
                     <div
                         key={card.id}
-                        className={`p-4 rounded-4xl shadow hover:shadow-lg transition cursor-pointer text-center text-white ${[0, 3].includes(index % 4) ? 'bg-[#007bff]' : 'bg-[#20c997]'
-                            }`}
+                        className="p-4 rounded-3xl shadow hover:shadow-2xl transition cursor-pointer text-center text-white bg-[#5D6D7E]"
                         data-aos="fade-up"
                         data-aos-delay={index * 100}
                         style={{ fontFamily: 'Nunito, sans-serif' }}
@@ -75,11 +74,22 @@ const WhyChooseUs = () => {
             </div>
 
 
-            {/* Big Card Below */}
-            {/* <div className="bg-cyan-600 p-6 md:p-10 rounded-lg shadow-lg text-center max-w-5xl mx-auto text-white space-y-6" style={{ fontFamily: 'Nunito, sans-serif' }}>
-                <h3 className="text-3xl font-bold text-red-700">Role of an Educator</h3>
 
-                <p className="text-lg">
+
+
+            {/* Big Card Below */}
+            <div
+                className="bg-gradient-to-br from-[#fdf1ec] via-[#fefcfb] to-[#f9f5f1] p-6 md:p-10 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-[#f4e8e3] text-center max-w-5xl mx-auto space-y-8"
+                style={{ fontFamily: 'Nunito, sans-serif' }}
+            >
+                <div>
+                    <h3 className="text-4xl font-bold text-[#2f4858] tracking-wide">
+                        Role of an Educator
+                    </h3>
+                    <div className="w-16 h-1 bg-[#f4a261] mx-auto rounded-full mt-2"></div>
+                </div>
+
+                <p className="text-lg text-[#374151] leading-relaxed">
                     A Montessori teacher thoughtfully prepares the environment with materials and activities that meet the
                     needs of the children and their unique talents. A Montessori teacher is a careful observer. She comes to
                     identify each child's interests. She understands the stages of development in each child and engages or
@@ -88,21 +98,21 @@ const WhyChooseUs = () => {
                     Education.
                 </p>
 
-                <p className="text-red-700 italic font-semibold text-lg">
+                <p className="italic font-semibold text-lg text-[#c05621]">
                     A guide, A keen Observer, Always follows the child
                 </p>
 
-                <p className="text-lg">
+                <p className="text-lg text-[#374151] leading-relaxed">
                     Montessori Teachers Cultivate Independence. They are less like the traditional idea of an instructor, and
                     more like a gentle guide. They don’t consider it their job to give a child information. They rather lead
                     children in the general direction and give them the tools they need to find the information themselves.
                 </p>
 
-                <p className="text-lg">
+                <p className="text-lg text-[#374151] leading-relaxed">
                     In Svatantra Montessori, the teachers are facilitators and guides. Our role is to observe each child’s
                     progress at a distance, his or her readiness to advance to new lessons, recognizing and interpreting each
                     child's needs. When it comes to assessments, Montessori teachers don’t rely on standardized tests; rather
-                    we rely on the power of observation. A Montessori Teachers notebook would be brimming with evidence of what
+                    we rely on the power of observation. A Montessori Teacher's notebook would be brimming with evidence of what
                     their children have mastered, need more support with, and are curious about. We are constantly recording
                     what they notice children working on and how that work is being executed. The role of the teacher in
                     Svatantra is providing children with tools for learning, not merely pouring knowledge and facts into them.
@@ -110,13 +120,16 @@ const WhyChooseUs = () => {
                     attribute of a Montessori teacher is the respect she holds for each child's needs.
                 </p>
 
-                <p className="text-lg">
+                <p className="text-lg text-[#374151] leading-relaxed">
                     The directress or adult periodically observes children working and records anecdotal notes to help drive
                     their work plans according to a child's individual needs. This recognizes and respects individual
                     variations in the learning process and is vital. This enables the building of coordination, concentration,
                     independence and order, and on longer terms towards the assimilation of information.
                 </p>
-            </div> */}
+            </div>
+
+
+
         </section>
     );
 };

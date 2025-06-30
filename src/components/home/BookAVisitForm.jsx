@@ -120,7 +120,10 @@ const BookAVisitForm = () => {
                         <div className="w-full">
                             <label className="block text-base font-semibold text-gray-700 mb-2">Select Date</label>
                             <div className="relative w-full">
-                                <FaCalendarAlt className="absolute left-4 top-1/2   transform -translate-y-1/2 text-pink-500 pointer-events-none" />
+                                {/* Calendar Icon */}
+                                <FaCalendarAlt className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500 z-10 pointer-events-none" />
+
+                                {/* DatePicker Input */}
                                 <DatePicker
                                     selected={date}
                                     onChange={(date) => setDate(date)}
@@ -132,11 +135,11 @@ const BookAVisitForm = () => {
                                     dayClassName={() =>
                                         'custom-day hover:bg-pink-100 rounded-full transition-all duration-200 '
                                     }
-                                    className="w-full pl-14 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-pink-500 outline-none text-lg bg-gray-100"
-
+                                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-pink-500 outline-none text-lg bg-gray-100"
                                 />
                             </div>
                         </div>
+
 
                         {/* Time */}
                         <div className="w-full">
