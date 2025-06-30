@@ -33,13 +33,12 @@ const Header = () => {
                     </NavLink>
 
                     {/* Montessori Dropdown */}
-                    {/* Montessori Dropdown */}
                     <div className="relative">
                         <button
                             onClick={() => setMontessoriOpen((prev) => !prev)}
                             className={`hover:text-pink-600 transition ${["/montessori-benefits", "/teaching-methods", "/montessori-vs-traditionals"].includes(location.pathname)
-                                    ? "text-pink-600"
-                                    : ""
+                                ? "text-pink-600"
+                                : ""
                                 }`}
                         >
                             Montessori
@@ -53,8 +52,8 @@ const Header = () => {
                                             to="/montessori-benefits"
                                             onClick={() => setMontessoriOpen(false)}
                                             className={`block px-5 py-2.5 border-l-4 ${isActive("/montessori-benefits")
-                                                    ? "border-pink-600 text-pink-600 bg-pink-50"
-                                                    : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
+                                                ? "border-pink-600 text-pink-600 bg-pink-50"
+                                                : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
                                                 }`}
                                         >
                                             Benefits
@@ -65,8 +64,8 @@ const Header = () => {
                                             to="/teaching-methods"
                                             onClick={() => setMontessoriOpen(false)}
                                             className={`block px-5 py-2.5 border-l-4 ${isActive("/teaching-methods")
-                                                    ? "border-pink-600 text-pink-600 bg-pink-50"
-                                                    : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
+                                                ? "border-pink-600 text-pink-600 bg-pink-50"
+                                                : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
                                                 }`}
                                         >
                                             Teaching Methods
@@ -77,8 +76,8 @@ const Header = () => {
                                             to="/montessori-vs-traditionals"
                                             onClick={() => setMontessoriOpen(false)}
                                             className={`block px-5 py-2.5 border-l-4 ${isActive("/montessori-vs-traditionals")
-                                                    ? "border-pink-600 text-pink-600 bg-pink-50"
-                                                    : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
+                                                ? "border-pink-600 text-pink-600 bg-pink-50"
+                                                : "border-transparent text-gray-700 hover:border-pink-600 hover:text-pink-600 hover:bg-pink-50"
                                                 }`}
                                         >
                                             Montessori vs Traditional
@@ -107,6 +106,12 @@ const Header = () => {
                         className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/gallery") ? "text-pink-600" : ""}`}
                     >
                         Gallery
+                    </NavLink>
+                    <NavLink
+                        to="/admission"
+                        className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/admission") ? "text-pink-600" : ""}`}
+                    >
+                        Admission
                     </NavLink>
                     <NavLink
                         to="/contact"
@@ -184,6 +189,13 @@ const Header = () => {
                         className={`block py-2 hover:text-pink-600 transition-colors duration-200 ${isActive("/gallery") ? "text-pink-600" : ""}`}
                     >
                         Gallery
+                    </NavLink>
+                    <NavLink
+                        to="/admission"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`block py-2 hover:text-pink-600 transition-colors duration-200 ${isActive("/admission") ? "text-pink-600" : ""}`}
+                    >
+                        Admission
                     </NavLink>
                     <NavLink
                         to="/contact"

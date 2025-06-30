@@ -1,15 +1,32 @@
 import React from 'react';
+import G1 from '../assets/images/gallery/g1.jpeg'
+import G2 from '../assets/images/gallery/g2.jpeg'
+
+import G3 from '../assets/images/gallery/g3.jpeg'
+
+import G4 from '../assets/images/gallery/g4.jpeg'
+
+import G5 from '../assets/images/gallery/g5.jpeg'
+
+import G6 from '../assets/images/gallery/g6.jpeg'
+
+import G7 from '../assets/images/gallery/g7.jpeg'
+
+import G8 from '../assets/images/gallery/g8.jpg'
+
+import G9 from '../assets/images/gallery/g9.jpg'
+
 
 const galleryImages = [
-  'https://svatantra.in/assets/202205121652342215.jpeg',
-  'https://svatantra.in/assets/202204261650955213.jpeg',
-  'https://svatantra.in/assets/202204261650955232.jpeg',
-  'https://svatantra.in/assets/202205121652342263.jpeg',
-  'https://svatantra.in/assets/202205121652342439.jpeg',
-  'https://svatantra.in/assets/202205121652342468.jpeg',
-  'https://svatantra.in/assets/202205121652342476.jpeg',
-  'https://svatantra.in/assets/202301121673532727.jpg',
-  'https://svatantra.in/assets/202301121673532798.jpg',
+  G1,
+ G2,
+  G3,
+ G4,
+ G5,
+ G6,
+  G7,
+ G8,
+ G9,
 
 
 

@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { lazy, useState } from 'react';
 import { Link } from 'react-router-dom';
-import WhyChooseUs from '../components/home/WhyChooseUs';
-import Testimonials from '../components/home/Testimonials';
-import Testimonial from '../components/home/Testimonials';
+// import WhyChooseUs from '../components/home/WhyChooseUs';
+// import Testimonials from '../components/home/Testimonials';
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import slide from '../assets/images/carousels/image.png'
+import BookAVisitForm from '../components/home/BookAVisitForm'
 
-
+const WhyChooseUs = lazy(() => import('../components/home/WhyChooseUs'));
+const Testimonials = lazy(() => import('../components/home/Testimonials'));
 const carouselItems = [
   {
-    image: 'https://svatantra.in/assets/img/banner0.jpeg',
+    image: slide,
     heading: 'Your Child Our Responsibility',
     subtitle: "Svatantra is about Holistic and child Centric Education",
 
@@ -17,7 +19,7 @@ const carouselItems = [
     link: '/contact',
   },
   {
-    image: 'https://svatantra.in/assets/img/banner0.jpeg',
+    image: slide,
     heading: 'Education And Care For Your Children',
     subtitle: "The Education of even a small child,therefore, doesnot aim at preparing him or her  for school, but for life.",
     buttonText: 'Get Started',
@@ -107,6 +109,7 @@ const Home = () => {
       {/* Why Choose Us Section */}
       <div className="relative z-0">
         <WhyChooseUs />
+        <BookAVisitForm />
         <Testimonials />
       </div>
     </>

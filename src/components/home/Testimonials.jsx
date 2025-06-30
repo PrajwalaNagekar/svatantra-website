@@ -46,7 +46,7 @@ const TestimonialSlider = () => {
     const { name, age, image, rating, testimonial } = testimonials[current];
 
     return (
-        <div className="w-full px-4 py-12 bg-gray-50">
+            <div className="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 lg:p-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-black mb-8 font-extrabold underline decoration-pink-300"
                 style={{ fontFamily: 'Nunito, sans-serif' }}>Feedbacks</h2>
 

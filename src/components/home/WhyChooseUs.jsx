@@ -1,39 +1,46 @@
 import React from 'react';
+import img1 from '../../assets/images/WhyChooseUs/img1.jpg'
+import img2 from '../../assets/images/WhyChooseUs/i2.jpg'
+import img3 from '../../assets/images/WhyChooseUs/i3.jpg'
+import img4 from '../../assets/images/WhyChooseUs/i4.jpg'
+import img5 from '../../assets/images/WhyChooseUs/i5.jpg'
+import img6 from '../../assets/images/WhyChooseUs/i6.jpg'
+
 
 const cards = [
     {
         id: 1,
-        image: 'https://svatantra.in/assets/img/inde/5.jpg',
+        image: img1,
         title: 'Freedom to choose',
         caption: 'Children choose their work and explore their content.',
     },
     {
         id: 2,
-        image: 'https://svatantra.in/assets/img/inde/2.jpg',
+        image: img2,
         title: 'Holistic Approach',
         caption: 'To approach the child as a whole person.',
     },
     {
         id: 3,
-        image: 'https://svatantra.in/assets/img/inde/3.jpg',
+        image: img3,
         title: 'Child Centered',
         caption: 'Every child is special with his/her own interests and peace of growth.',
     },
     {
         id: 4,
-        image: 'https://svatantra.in/assets/img/inde/6.jpg',
+        image: img4,
         title: 'Encourages Social Development',
         caption: 'Children learn to work together by encouraging one another and handling themselves during a conflict.',
     },
     {
         id: 5,
-        image: 'https://svatantra.in/assets/img/inde/1.jpg',
+        image: img5,
         title: 'Mixed Age Group',
         caption: 'All age groups of children work together as a community leading a helping hand to each other.',
     },
     {
         id: 6,
-        image: 'https://svatantra.in/assets/img/inde/4.jpg',
+        image: img6,
         title: 'Encourages Individual Talents',
         caption: 'Every child\'s individual interests are respected and encouraged.',
     },
@@ -69,7 +76,7 @@ const WhyChooseUs = () => {
 
 
             {/* Big Card Below */}
-            <div className="bg-cyan-600 p-6 md:p-10 rounded-lg shadow-lg text-center max-w-5xl mx-auto text-white space-y-6" style={{ fontFamily: 'Nunito, sans-serif' }}>
+            {/* <div className="bg-cyan-600 p-6 md:p-10 rounded-lg shadow-lg text-center max-w-5xl mx-auto text-white space-y-6" style={{ fontFamily: 'Nunito, sans-serif' }}>
                 <h3 className="text-3xl font-bold text-red-700">Role of an Educator</h3>
 
                 <p className="text-lg">
@@ -109,7 +116,7 @@ const WhyChooseUs = () => {
                     variations in the learning process and is vital. This enables the building of coordination, concentration,
                     independence and order, and on longer terms towards the assimilation of information.
                 </p>
-            </div>
+            </div> */}
         </section>
     );
 };
