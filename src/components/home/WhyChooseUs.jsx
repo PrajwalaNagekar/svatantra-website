@@ -5,37 +5,37 @@ const cards = [
         id: 1,
         image: 'https://svatantra.in/assets/img/inde/5.jpg',
         title: 'Freedom to choose',
-        caption: 'Guiding young minds with care and skill.',
+        caption: 'Children choose their work and explore their content.',
     },
     {
         id: 2,
         image: 'https://svatantra.in/assets/img/inde/2.jpg',
         title: 'Holistic Approach',
-        caption: 'Empowering children through personalized learning.',
+        caption: 'To approach the child as a whole person.',
     },
     {
         id: 3,
         image: 'https://svatantra.in/assets/img/inde/3.jpg',
         title: 'Child Centered',
-        caption: 'Your child’s safety is our priority.',
+        caption: 'Every child is special with his/her own interests and peace of growth.',
     },
     {
         id: 4,
         image: 'https://svatantra.in/assets/img/inde/6.jpg',
         title: 'Encourages Social Development',
-        caption: 'Fostering creativity and curiosity.',
+        caption: 'Children learn to work together by encouraging one another and handling themselves during a conflict.',
     },
     {
         id: 5,
         image: 'https://svatantra.in/assets/img/inde/1.jpg',
         title: 'Mixed Age Group',
-        caption: 'Learning with the best tools and space.',
+        caption: 'All age groups of children work together as a community leading a helping hand to each other.',
     },
     {
         id: 6,
         image: 'https://svatantra.in/assets/img/inde/4.jpg',
         title: 'Encourages Individual Talents',
-        caption: 'Focus on emotional, social, and academic growth.',
+        caption: 'Every child\'s individual interests are respected and encouraged.',
     },
 ];
 
