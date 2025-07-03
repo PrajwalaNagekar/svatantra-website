@@ -31,7 +31,7 @@ const carouselItems = [
   {
     image: G3,
     heading: 'Teacher Training',
-    subtitle: "Get trained from experts and start your career  as a Montessiori teacher",
+    subtitle: "Get trained from experts and start your career  as a Montessori teacher",
     buttonText: 'Get Started',
     link: '/teacher-training',
   },
