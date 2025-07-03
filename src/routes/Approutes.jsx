@@ -10,6 +10,8 @@ import Admission from '../pages/Admission';
 import MontessoriBenefits from '../components/Montessori/benefits/MontessoriBenefits';
 import MontessoriTeachingMethods from '../components/Montessori/teachingMethods/MontessoriTeachingMethods';
 import MontessoriVsTraditional from '../components/Montessori/differences/MontessoriVsTraditional';
+import Event from '../pages/Event';
+import TeacherTraining from '../pages/TeacherTraining';
 
 const AppRoutes = () => {
   return (
@@ -19,6 +21,8 @@ const AppRoutes = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/admission" element={<Admission />} />
+      <Route path="/events" element={<Event />} />
+      <Route path="/teacher-training" element={<TeacherTraining />} />
 
       <Route path="/montessori-benefits" element={<MontessoriBenefits />} />
       <Route path="/teaching-methods" element={<MontessoriTeachingMethods />} />

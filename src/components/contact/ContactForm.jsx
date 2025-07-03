@@ -91,7 +91,7 @@ const ContactForm = () => {
                 <textarea
                     name="comments"
                     required
-                    placeholder="Comments"
+                    placeholder="message"
                     rows="5"
                     value={form.comments}
                     onChange={handleChange}

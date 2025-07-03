@@ -2,13 +2,29 @@ import { useState } from "react"
 import { NavLink, useLocation } from "react-router-dom"
 import { Menu } from "lucide-react"
 import Logo from '../../assets/images/logos/swatantra_logo.png'
+import { useEffect, useRef } from "react";
 
 const Header = () => {
+
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [isMontessoriOpen, setMontessoriOpen] = useState(false)
     const location = useLocation()
+    const dropdownRef = useRef(null);
+
 
     const isActive = (path) => location.pathname === path
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setMontessoriOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     return (
         <header className="sticky top-0 z-50 bg-white shadow">
@@ -45,7 +61,11 @@ const Header = () => {
                         </button>
 
                         {isMontessoriOpen && (
-                            <div className="absolute top-full left-0 w-64 z-50 bg-white shadow-lg rounded-md border border-pink-100 mt-2">
+                            <div
+                                ref={dropdownRef}
+                                className="absolute top-full left-0 w-64 z-50 bg-white shadow-lg rounded-md border border-pink-100 mt-2"
+                            >
+
                                 <ul className="py-2">
                                     <li>
                                         <NavLink
@@ -88,12 +108,24 @@ const Header = () => {
                         )}
                     </div>
 
-
                     <NavLink
-                        to="/event"
-                        className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/event") ? "text-pink-600" : ""}`}
+                        to="/admission"
+                        className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/admission") ? "text-pink-600" : ""}`}
                     >
-                        Event
+                        Admission
+                    </NavLink>
+                    <NavLink
+                        to="/teacher-training"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`block py-2 hover:text-pink-600 transition-colors duration-200 ${isActive("/teacher-training") ? "text-pink-600" : ""}`}
+                    >
+                        Teacher Training
+                    </NavLink>
+                    <NavLink
+                        to="/events"
+                        className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/events") ? "text-pink-600" : ""}`}
+                    >
+                        Events
                     </NavLink>
                     <NavLink
                         to="/about"
@@ -107,12 +139,7 @@ const Header = () => {
                     >
                         Gallery
                     </NavLink>
-                    <NavLink
-                        to="/admission"
-                        className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/admission") ? "text-pink-600" : ""}`}
-                    >
-                        Admission
-                    </NavLink>
+
                     <NavLink
                         to="/contact"
                         className={`hover:text-pink-600 transition-colors duration-200 ${isActive("/contact") ? "text-pink-600" : ""}`}
@@ -168,13 +195,26 @@ const Header = () => {
                             </div>
                         )}
                     </div>
-
+                    <NavLink
+                        to="/admission"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`block py-2 hover:text-pink-600 transition-colors duration-200 ${isActive("/admission") ? "text-pink-600" : ""}`}
+                    >
+                        Admission
+                    </NavLink>
+                    <NavLink
+                        to="/teacher-training"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`block py-2 hover:text-pink-600 transition-colors duration-200 ${isActive("/teacher-training") ? "text-pink-600" : ""}`}
+                    >
+                        Teacher Training
+                    </NavLink>
                     <NavLink
                         to="/event"
                         onClick={() => setMobileMenuOpen(false)}
                         className={`block py-2 hover:text-pink-600 transition-colors duration-200 ${isActive("/event") ? "text-pink-600" : ""}`}
                     >
-                        Event
+                        Events
                     </NavLink>
                     <NavLink
                         to="/about"
@@ -190,13 +230,7 @@ const Header = () => {
                     >
                         Gallery
                     </NavLink>
-                    <NavLink
-                        to="/admission"
-                        onClick={() => setMobileMenuOpen(false)}
-                        className={`block py-2 hover:text-pink-600 transition-colors duration-200 ${isActive("/admission") ? "text-pink-600" : ""}`}
-                    >
-                        Admission
-                    </NavLink>
+
                     <NavLink
                         to="/contact"
                         onClick={() => setMobileMenuOpen(false)}

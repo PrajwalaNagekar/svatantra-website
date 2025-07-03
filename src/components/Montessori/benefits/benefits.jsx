@@ -1,5 +1,6 @@
 import React from 'react';
-import BenefitsImage from '../../../assets/images/montessori-benefits/benefites.png';
+// import BenefitsImage from '../../../assets/images/montessori-benefits/benefites.png';
+import G8 from '../../../assets/images/gallery/g8.jpg'
 import { FaRegCircleCheck } from "react-icons/fa6";
 
 const Benefits = () => {
@@ -22,9 +23,9 @@ const Benefits = () => {
             <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="w-full lg:w-1/2 flex justify-center">
                     <img
-                        src={BenefitsImage}
+                        src={G8}
                         alt="Montessori benefits"
-                        className="max-w-[300px] max-h-[600px] w-full h-auto rounded-lg shadow-lg object-cover"
+                        className="max-w-[800px] max-h-[700px] w-full h-auto rounded-lg shadow-lg object-cover"
                     />
                 </div>
 

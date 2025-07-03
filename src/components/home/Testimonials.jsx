@@ -46,45 +46,48 @@ const TestimonialSlider = () => {
     const { name, age, image, rating, testimonial } = testimonials[current];
 
     return (
-            <div className="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 lg:p-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-black mb-8 font-extrabold underline decoration-pink-300"
-                style={{ fontFamily: 'Nunito, sans-serif' }}>Feedbacks</h2>
+        <div className="w-full px-4 py-12">
+            <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl p-6 sm:p-10 lg:p-16">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-black mb-8 font-extrabold underline decoration-pink-300"
+                    style={{ fontFamily: 'Nunito, sans-serif' }}>Testimonials</h2>
 
-            <div className="relative max-w-3xl mx-auto bg-white rounded-lg shadow-lg px-6 py-12 sm:px-10 sm:py-16">
-                {/* Left Button */}
-                <button
-                    onClick={prev}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-pink-500 hover:bg-pink-600 text-white w-10 h-10 rounded-full shadow flex items-center justify-center"
-                >
-                    ‹
-                </button>
+                <div className="relative max-w-5xl mx-auto bg-white rounded-3xl  px-6 py-12 sm:px-14 sm:py-16 lg:px-20 lg:py-20">
+                    {/* Left Button */}
+                    <button
+                        onClick={prev}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 bg-pink-500 hover:bg-pink-600 text-white w-10 h-10 rounded-full shadow flex items-center justify-center"
+                    >
+                        ‹
+                    </button>
 
-                {/* Testimonial Content */}
-                <div className="flex flex-col items-center text-center px-4 sm:px-8">
-                    <img
-                        src={image}
-                        alt={name}
-                        className="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover mb-4"
-                    />
-                    <h3 className="text-xl font-semibold text-gray-800">{name}</h3>
-                    <div className="flex items-center justify-center gap-2 mt-2 text-yellow-500">
-                        {[...Array(rating)].map((_, idx) => (
-                            <FaStar key={idx} />
-                        ))}
-                        <span className="text-sm text-gray-500 ml-2">{age} years</span>
+                    {/* Testimonial Content */}
+                    <div className="flex flex-col items-center text-center px-4 sm:px-8">
+                        <img
+                            src={image}
+                            alt={name}
+                            className="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover mb-4"
+                        />
+                        <h3 className="text-xl font-semibold text-gray-800">{name}</h3>
+                        <div className="flex items-center justify-center gap-2 mt-2 text-yellow-500">
+                            {[...Array(rating)].map((_, idx) => (
+                                <FaStar key={idx} />
+                            ))}
+                            <span className="text-sm text-gray-500 ml-2">{age} years</span>
+                        </div>
+                        <p className="mt-4 text-gray-600 italic max-w-3xl">“{testimonial}”</p>
                     </div>
-                    <p className="mt-4 text-gray-600 italic max-w-2xl">“{testimonial}”</p>
-                </div>
 
-                {/* Right Button */}
-                <button
-                    onClick={next}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 bg-pink-500 hover:bg-pink-600 text-white w-10 h-10 rounded-full shadow flex items-center justify-center"
-                >
-                    ›
-                </button>
+                    {/* Right Button */}
+                    <button
+                        onClick={next}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 bg-pink-500 hover:bg-pink-600 text-white w-10 h-10 rounded-full shadow flex items-center justify-center"
+                    >
+                        ›
+                    </button>
+                </div>
             </div>
         </div>
+
     );
 };
 

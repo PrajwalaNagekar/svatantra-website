@@ -5,6 +5,7 @@ import AppRoutes from './routes/Approutes';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import ScrollToTop from './components/layouts/ScrollToTop'
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
       <Topbar />
       <Header />
       <main className="min-h-screen">
+        <ScrollToTop />
         <AppRoutes />
       </main>
       <Footer />

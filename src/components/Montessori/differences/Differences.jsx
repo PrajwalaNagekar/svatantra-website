@@ -48,7 +48,7 @@ const Differences = () => {
             </div>
 
             {/* Tags */}
-            <div className="max-w-4xl mx-auto pt-6 border-t border-gray-300 text-sm text-gray-600">
+            {/* <div className="max-w-4xl mx-auto pt-6 border-t border-gray-300 text-sm text-gray-600">
                 <span className="font-semibold mr-2">Tags:</span>
                 <span className="inline-block bg-gray-200 text-gray-700 px-3 py-1 rounded-full mr-2">
                     Children
@@ -62,7 +62,7 @@ const Differences = () => {
                 <span className="inline-block bg-gray-200 text-gray-700 px-3 py-1 rounded-full">
                     Montessori
                 </span>
-            </div>
+            </div> */}
 
         </div>
     );

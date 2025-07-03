@@ -14,15 +14,16 @@ const Footer = () => {
 
           <div className="flex gap-5 mt-4">
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/919902587760"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-green-400 text-xl"
             >
               <FaWhatsapp />
             </a>
+
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/SvatantraMontessori"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 text-xl"
@@ -30,7 +31,7 @@ const Footer = () => {
               <FaFacebookF />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/svatantramontessori?utm_source=ig_web_button_share_sheet&igsh=ZnVrdmkxenViMTdv"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-pink-400 text-xl"
