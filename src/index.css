@@ -16,3 +16,7 @@
 .fade-in-up {
     animation: fadeInUp 1s ease-out forwards;
 }
+/* 
+* {
+    outline: 1px solid rgba(255, 0, 0, 0.4);
+} */

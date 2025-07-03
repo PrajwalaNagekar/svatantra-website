@@ -46,8 +46,8 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Useful Links</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <NavLink to="/gallery" className="hover:text-pink-400">
-                Gallery
+              <NavLink to="/campus" className="hover:text-pink-400">
+                Campus
               </NavLink>
             </li>
             <li>

@@ -24,7 +24,7 @@ const Gallery = () => {
         style={{ fontFamily: 'Nunito, sans-serif' }}
         className="text-3xl md:text-5xl font-extrabold text-center text-black mb-8 underline decoration-pink-300"
       >
-        Gallery
+        Campus
       </h2>
 
       {loading ? (

@@ -16,6 +16,7 @@ const BookAVisitForm = () => {
     const [time, setTime] = useState('');
     const [loading, setLoading] = useState(false);
     const [popup, setPopup] = useState({ show: false, message: '', type: 'success' });
+
     useEffect(() => {
         if (popup.show) {
             document.body.style.overflow = 'hidden'; // disable scroll
@@ -43,12 +44,11 @@ const BookAVisitForm = () => {
         '02:30 PM',
     ];
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         if (!name || !mobile || !date || !time) {
             setPopup({ show: true, message: 'All fields are required', type: 'error' });
-            // console.log("🚀 ~ handleSubmit ~ payload:", payload)
             return;
         }
 
@@ -58,17 +58,16 @@ const BookAVisitForm = () => {
             date: date.toISOString().split('T')[0],
             time,
         };
+
         try {
             setLoading(true);
             const response = await bookAVisit(payload);
-            // console.log("🚀 ~ handleSubmit ~ response:", response)
             setPopup({ show: true, message: 'Visit booked successfully!', type: 'success' });
             setName('');
             setMobile('');
             setDate(null);
             setTime('');
         } catch (error) {
-            // console.log("🚀 ~ handleSubmit ~ error:", error)
             setPopup({ show: true, message: 'Failed to book the visit. Please try again.', type: 'error' });
         } finally {
             setLoading(false);
@@ -77,8 +76,20 @@ const BookAVisitForm = () => {
 
     return (
         <div className="w-full px-4 py-12">
-            <div className="max-w-6xl mx-auto">
+            <style jsx>{`
+                .react-datepicker-wrapper {
+                    width: 100% !important;
+                }
+                .react-datepicker__input-container {
+                    width: 100% !important;
+                }
+                .react-datepicker__input-container input {
+                    width: 100% !important;
+                    box-sizing: border-box !important;
+                }
+            `}</style>
 
+            <div className="max-w-6xl mx-auto">
                 {loading && <FullScreenLoader />}
                 {popup.show && (
                     <PopupModal
@@ -87,6 +98,7 @@ const BookAVisitForm = () => {
                         onClose={() => setPopup({ ...popup, show: false })}
                     />
                 )}
+
                 <div className="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 lg:p-16">
                     <h2 className="text-3xl sm:text-4xl text-center font-extrabold text-black mb-10 underline decoration-pink-300" style={{ fontFamily: 'Nunito, sans-serif' }}>
                         Book A Visit
@@ -97,7 +109,7 @@ const BookAVisitForm = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Name */}
                             <div className="w-full relative">
-                                <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500" />
+                                <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500 z-10" />
                                 <input
                                     type="text"
                                     placeholder="Full Name"
@@ -110,7 +122,7 @@ const BookAVisitForm = () => {
 
                             {/* Mobile */}
                             <div className="w-full relative">
-                                <FaPhone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500" />
+                                <FaPhone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500 z-10" />
                                 <input
                                     type="tel"
                                     placeholder="Mobile Number"
@@ -129,7 +141,6 @@ const BookAVisitForm = () => {
                                     className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-pink-500 outline-none text-lg bg-gray-100"
                                 />
                             </div>
-
                         </div>
 
                         {/* Row 2: Date and Time */}
@@ -139,38 +150,38 @@ const BookAVisitForm = () => {
                                 <label className="block text-base font-semibold text-gray-700 mb-2">Select Date</label>
                                 <div className="relative w-full">
                                     {/* Calendar Icon */}
-                                    <FaCalendarAlt className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500 z-10 pointer-events-none" />
-
+                                    <FaCalendarAlt className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500 z-20 pointer-events-none" />
                                     {/* DatePicker Input */}
-                                    <DatePicker
-                                        selected={date}
-
-                                        onChange={(date) => setDate(date)}
-                                        filterDate={isWeekday}
-                                        placeholderText="Choose a weekday "
-                                        dateFormat="dd/MM/yyyy"
-                                        minDate={new Date()}
-                                        calendarClassName="custom-calendar"
-                                        dayClassName={() =>
-                                            'custom-day hover:bg-pink-100 rounded-full transition-all duration-200 '
-                                        }
-                                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-pink-500 outline-none text-lg bg-gray-100"
-                                    />
+                                    <div className="w-full">
+                                        <DatePicker
+                                            selected={date}
+                                            onChange={(date) => setDate(date)}
+                                            filterDate={isWeekday}
+                                            placeholderText="Choose a weekday"
+                                            dateFormat="dd/MM/yyyy"
+                                            minDate={new Date()}
+                                            calendarClassName="custom-calendar"
+                                            wrapperClassName="w-full"
+                                            dayClassName={() =>
+                                                'custom-day hover:bg-pink-100 rounded-full transition-all duration-200'
+                                            }
+                                            className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-pink-500 outline-none text-lg bg-gray-100"
+                                            style={{ width: '100%' }}
+                                        />
+                                    </div>
                                 </div>
                             </div>
-
 
                             {/* Time */}
                             <div className="w-full">
                                 <label className="block text-base font-semibold text-gray-700 mb-2">Select Time</label>
                                 <div className="relative w-full">
-                                    <FaClock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500" />
+                                    <FaClock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500 z-10" />
                                     <select
                                         value={time}
                                         onChange={(e) => setTime(e.target.value)}
                                         required
                                         className="w-full pl-14 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-pink-500 outline-none text-lg text-black font-semibold bg-gray-100 hover:cursor-pointer"
-
                                     >
                                         <option disabled value="" className="text-gray-400">Select time</option>
                                         {timeSlots.map((slot, index) => (
@@ -187,7 +198,6 @@ const BookAVisitForm = () => {
                             </div>
                         </div>
 
-
                         {/* Submit Button */}
                         <button
                             type="submit"
@@ -199,7 +209,6 @@ const BookAVisitForm = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 

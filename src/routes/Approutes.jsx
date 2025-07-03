@@ -19,7 +19,7 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/campus" element={<Gallery />} />
       <Route path="/admission" element={<Admission />} />
       <Route path="/events" element={<Event />} />
       <Route path="/teacher-training" element={<TeacherTraining />} />

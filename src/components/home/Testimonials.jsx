@@ -3,33 +3,27 @@ import { FaStar } from 'react-icons/fa';
 
 const testimonials = [
     {
-        name: 'Varsha Gudi',
+        name: 'Ramesh Babu',
         age: 3,
         image: 'https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png',
         rating: 5,
-        testimonial: 'svatantra montessori house of children\' helps children become independent right from a young age, and with true Montessori way of education. Pravena is a passionate educator and it\'s a completely child focused school. And whenever we asked Pravena regarding any queries on parenting tips during lock-down period to overcome parental anxieties ,she always counseled us , which helped us in fostering a better parent-child relationship. They have taken care online classes very well and child is able to follow and put in lot of efforts to address their needs'
+        testimonial: 'We have admitted our daughter to Svatantra in the year 2022 and she has completed her 3 years of montessori journey and learnt a lot with full of fun and joy. All the staff were well trained with high quality of teaching skills. Ambience is also very nice.I strongly recommend Montessori method of learning for any kid.When we say Montessori, many schools are doing business in the name of Montessori, but svatantra is practicing the concept strictly without any compromise.'
     },
     {
-        name: 'Priyaram bk',
-        age: 4,
-        image: 'https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png',
-        rating: 4,
-        testimonial: 'One of the best Montessori I have experienced and seen.Its like a second home for my son.As we were not very much satisfied by the normal schooling methodologies experienced through our elder son, we wanted to try alternate schooling methods for our second son Vihith Ram, who started his montessori schooling at The Svatantra Montessori.We are more than happy with the option we sought for him.As, The mentors made him feel very comfortable and he loves his school environment from the day one.We feel very fortunate for opting the Montessori method for our child through Svatantra !!',
-    },
-    {
-        name: 'Rahul Sanghvi',
+        name: 'Asha bharath',
         age: 3,
         image: 'https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png',
         rating: 5,
-        testimonial: 'If you are looking for a "REAL" Montessori school, Svatantra Monstessori is THE BEST in this part of Bangalore. Read the full review below, but more importantly, make sure you visit school to experience yourself. Took almost a year to write this review and was deliberate in my action as wanted to experience firsthand, took enough time and then act. Having returned from the UK, experienced Montessori method, understood and trusted that Montessori is the BEST for my kids & their future, next step was to freeze on the school that offered Montessori education and that’s the toughest part!',
+        testimonial: 'As a parent of two kids, I always wanted my kids to enjoy their learning, get individual attention, not pressurised and I could able to see all this at Svatantra Montessori. Pravena and team are doing really a very good job. I am very much happy about the progress of my kids at Svatantra.',
     },
     {
-        name: 'Sowmya Chandrashekhar',
-        age: 4,
+        name: 'Sahana Pramod',
+        age: 10,
         image: 'https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png',
         rating: 5,
-        testimonial: 'I am an educationist and quite finicky about ‘how’ my child learns as much ‘what’ she learns. Svatantra Montessori does a great job with the kids. Very balanced approach to everything. They focus on teaching children how to learn along with teaching them things. They have a beautiful indoor-outdoor space so children are not just indoors all the time. My 3.5 year old loves her school!I am seeing very positive growth in my child. He is very happy and likes going to school. He has stopped playing games on Mobile or even watching videos on Laptop.I highly recommend Svatantra House of Children.',
+        testimonial: 'Svatantra Montessori School has been a fantastic environment for my child’s growth. The classrooms are beautifully organized, and the Montessori materials are of high quality, fostering a love for learning. The teachers are Montessori-certified and provide excellent guidance, allowing children to explore and learn at their own pace.The school community is very welcoming, with plenty of opportunities for parental involvement.it is like a second house for my son.we are really satisfied with myson\'s improvement over an yearOver all, Svatantra Montessori School has provided a nurturing and enriching environment for my child’s development.I highly recommend it to other parents looking for a Montessori education." Thanks lot to Ms. Praveena.',
     },
+  
 ];
 
 const TestimonialSlider = () => {
@@ -72,7 +66,10 @@ const TestimonialSlider = () => {
                             {[...Array(rating)].map((_, idx) => (
                                 <FaStar key={idx} />
                             ))}
-                            <span className="text-sm text-gray-500 ml-2">{age} years</span>
+                            <span className="text-sm text-gray-500 ml-2"><span className="text-sm text-gray-500 ml-2">
+                                {age} {current < 2 ? 'weeks' : 'months'} ago
+                            </span>
+                            </span>
                         </div>
                         <p className="mt-4 text-gray-600 italic max-w-3xl">“{testimonial}”</p>
                     </div>
