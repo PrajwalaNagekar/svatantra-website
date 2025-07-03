@@ -176,26 +176,23 @@ const BookAVisitForm = () => {
                             <div className="w-full">
                                 <label className="block text-base font-semibold text-gray-700 mb-2">Select Time</label>
                                 <div className="relative w-full">
-                                    <FaClock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-500 z-10" />
+                                    <FaClock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-500 z-10" />
                                     <select
                                         value={time}
                                         onChange={(e) => setTime(e.target.value)}
                                         required
-                                        className="w-full pl-14 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-pink-500 outline-none text-lg text-black font-semibold bg-gray-100 hover:cursor-pointer"
+                                        className="w-full pl-16 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-pink-500 outline-none text-lg text-black font-semibold bg-gray-100 hover:cursor-pointer appearance-none antialiased"
                                     >
                                         <option disabled value="" className="text-gray-400">Select time</option>
                                         {timeSlots.map((slot, index) => (
-                                            <option
-                                                key={index}
-                                                value={slot}
-                                                className="text-black font-semibold hover:bg-pink-100"
-                                            >
+                                            <option key={index} value={slot} className="text-black font-semibold hover:bg-pink-100">
                                                 {slot}
                                             </option>
                                         ))}
                                     </select>
                                 </div>
                             </div>
+
                         </div>
 
                         {/* Submit Button */}
