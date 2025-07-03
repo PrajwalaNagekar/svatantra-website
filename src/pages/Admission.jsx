@@ -190,12 +190,14 @@ const Admission = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.dob}
+                max={new Date().toISOString().split("T")[0]} // restrict to today or earlier
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-500 outline-none bg-gray-100"
               />
               {formik.touched.dob && formik.errors.dob && (
                 <p className="text-red-500 text-sm mt-1">{formik.errors.dob}</p>
               )}
             </div>
+
           </div>
         </div>
 
