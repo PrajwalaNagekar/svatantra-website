@@ -9,7 +9,7 @@ import G2 from '../assets/images/gallery/g2.jpeg'
 
 import G3 from '../assets/images/gallery/g3.jpeg'
 import BookAVisitForm from '../components/home/BookAVisitForm'
-
+import Schools from '../components/home/Schools';
 const WhyChooseUs = lazy(() => import('../components/home/WhyChooseUs'));
 const Testimonials = lazy(() => import('../components/home/Testimonials'));
 const carouselItems = [
@@ -121,6 +121,7 @@ const Home = () => {
         <WhyChooseUs />
         <BookAVisitForm />
         <Testimonials />
+        <Schools/>
       </div>
     </>
   );

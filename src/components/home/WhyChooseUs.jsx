@@ -51,7 +51,7 @@ const WhyChooseUs = () => {
         <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50">
             <div className="max-w-6xl mx-auto">
 
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-black mb-8 font-extrabold underline decoration-pink-300"
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-center text-black mb-8 font-extrabold underline decoration-pink-300"
                     style={{ fontFamily: 'Nunito, sans-serif' }}>Why Choose Us</h2>
 
                 {/* Cards */}
@@ -79,7 +79,6 @@ const WhyChooseUs = () => {
 
 
 
-                {/* Big Card Below */}
                 {/* Big Card Below */}
                 <div
                     className="bg-gradient-to-br from-[#ffc9b2] via-[#fefcfb] to-[#ffe1c4] p-6 md:p-10 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-[#f4e8e3] text-center space-y-8"

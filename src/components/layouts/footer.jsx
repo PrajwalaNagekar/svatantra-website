@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
@@ -37,6 +37,10 @@ const Footer = () => {
               className="text-white hover:text-pink-400 text-xl"
             >
               <FaInstagram />
+            </a>
+            <a href="https://youtube.com/@svatantramontessori?si=RNt1fPmskkeVdH90" target='_blank' rel="noopener noreferrer" className="text-white hover:text-red-400 text-xl"
+            >
+              <FaYoutube />
             </a>
           </div>
         </div>
