@@ -8,12 +8,12 @@ const DirectorsNote = () => {
                     Director’s Note
                 </h2>
 
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className=" leading-relaxed text-justify">
                     Pravenalini is a Certified Montessorian from Indian Montessori Training Centre. Svatantra is the seed of her passion which today is a thriving early childhood environment. She is a Montessorian for over 15 years. Her journey began as a volunteer in a School for Differently abled, during which her passion was directed towards the Montessori Methodology of Education by caring mentors.
 
                 </p>
 
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className="leading-relaxed text-justify">
                     She believes that children who have been nurtured in the right environment always have the best to offer to the world. To children, we can offer them the world and they will further create the best from it. She believes that the best education to offer to children is the Montessori Methodology, which ensures the children not only develop intellectually or physically but also as Empathetic and Emotionally strong Individuals.
                 </p>
             </div>
