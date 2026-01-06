@@ -8,9 +8,10 @@ const ContactInfo = () => {
             <div style={{ fontFamily: 'Nunito, sans-serif' }} className="p-2">
                 <h3 className="font-semibold text-2xl">Location</h3>
                 <p className="text-gray-600">
-                    148/149, House Srikamala<br />
-                    Sarvabhoumanagar Chikkalasandra 2nd<br />
-                    Main Uttarahalli Bangalore - 560061
+                   8th Main<br />
+                     Kuvempunagar, near Gokulam Appartments, Doddakallasandra,<br />
+                    Bengaluru, Karnataka 560062
+
                 </p>
             </div>
 
